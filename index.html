@@ -4,13 +4,43 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+
 
   <body>
 
+    <header>
+      <h1> <!--TO DO center with css |  Make "Current Mood: ____" status, needs to only show after mood is picked-->
+        MOOD MUSIC</h1>
+    </header>
+    <div>
+            <!--TO DO Make mood choices work?-->
+
+      <button>Sad</button>
+      <button>Angry</button>
+      <button>Happy</button>
+      <button>Love</button>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+      <!--TO DO Make display box for song info, showing info after mood is first clicked-->
+      <p>Song Information</p>
+      </div>
+      <div class="col-sm-4">
+      <!--TO DO Make display box for 5 random mood-based songs, showing info after mood is first clicked-->
+      <p>Songs</p>
+      </div>
+    
+      <div class="col-sm-4 d-flex flex-column gap-2 mx-auto">
+      <!--TO DO make nav links work-->
+        <button class="btn btn-secondary" type="button" id="REROLL">Reroll Songs</button> 
+        <button class="btn btn-outline-secondary" type="button" id="NEW MOOD">New Mood</button> 
+
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 
 </html>
