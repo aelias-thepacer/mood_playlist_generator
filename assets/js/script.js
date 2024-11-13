@@ -4,16 +4,41 @@ let songArrayLove = [{songName:"Make It Wit Chu", songArtist:"Queens of The Ston
 let songArrayAngry = [{songName:"Rats", songArtist:"Cancer Bats"}, {songName:"My Heart is the Worst Kind of Weapon", songArist:"Fall Out Boy"}, {songName:"Track 1 R", songArtist:"'68"},{songName:"Mother", songArtist:"IDLES"},{songName:"Troglodyte", songArtist:"Viagra Boys"}, {songName:"Blood And Thunder", songArtsit:"Mastodon"}, {songName:"Cyberpsychosis", songArtist:"Faderhead"}, {songName:"God Run", songArtist:"505 Games"}, {songName:"Blood Code", songArtist:"Le Castle Vania"}, {songName:"Half-Life", songArtist:"Essenger"}, {songName:"Purify", songArtist:"Metallica"}, {songName:"Freebooter", songArtist:"High On Fire"}, {songName:"One Gun", songArtist:"Lamb Of God"}, {songName:"Explosia", songArtist:"Gojira"}, {songName:"Why You Gotta Kick Me While I’m Down", songArtist:"Bring Me The Horizon"}, {songName:"Deep End", songArtist:" I Prevail"}, {songName:"Reinventing Your Exit", songArtist:"Underoath"}, {songName:"The Crown", songArtist:"Stick To Your Guns"}];
 let songArrayCalm = [{songName:"Blue Reverie", songArtist:"ERRA"},{songName:" We Out Of Sight", songArtist:"Hundredth"},{songName:"Lesser Gods", songArtist:"Ghost Atlas"},{songName:"Slow Motion", songArtist:"Flor"},{songName:"Fluff", songArtist:"Black Sabbath"},{songName:"The Golden Rose", songArtist:"Tom Petty"},{songName:"Intermission", songArtist:"Truckerfighters"},{songName:"Kana Kassy", songArtist:"Ali Farke Toure"},{songName:"Sweden", songArtist:"C418"},{songName:"The River", songArtist:"Andrew Prahlow"},{songName:"Robotic Assist Module", songArtist:"Wojciech Golczewskie"},{songName:"Aria Math", songArtist:"C418"},{songName:"Lost Ember Main Title", songArtist:"Will Morton"},{songName:"Winter Is All Over You (Baauer Remix)", songArtist:"First Aid Kit"},{songName:"Alrighty Aphrodite", songArtist:"Peach Pit"},{songName:"We've Never Met but Can We Have a Cup of Coffee or Something", songArtist:"In Love With A Ghost"},{songName:"Hurt", songArtist:"Yung Lean"},{songName:"November Air", songArtist:"Zach Bryan"}];
 
-let currentMood = "none";
+let currentMood = songArraySad;
 let numberOfSongs = 10;
+let song;
 
+let songsDivEl = document.querySelector('#songsDiv');
 
 
 function songSelector(songArray, songsCalled) {
+    console.log("ran songSelector");
+    songsDivEl.innerHTML = "";
     for (let index = 0; index < songsCalled; index++) {
-        console.log(songArray[Math.floor(Math.random() * songArray.length)]);
+        song = songArray[Math.floor(Math.random() * songArray.length)];
+        console.log(song);
+        objectMaker(song);
         
     }
+}
+
+function objectMaker(object) {
+    let articleEl = document.createElement('article');
+    let titleEl = document.createElement('h2');
+    let contentEl = document.createElement('blockquote');
+    let posterEl = document.createElement('p');
+
+    titleEl.textContent = object.songName;
+    contentEl.textContent = object.songArtist;
+
+    songsDivEl.appendChild(articleEl);
+    articleEl.appendChild(titleEl);
+    articleEl.appendChild(contentEl);
+    articleEl.appendChild(posterEl);
+}
+
+function printSongs() {
+
 }
 
 
