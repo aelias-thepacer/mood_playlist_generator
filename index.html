@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+    h1 {font-family: Garamond, Helvetica, sans-serif;}
+    .modal-body {color: rgb(0, 0, 0); font-family: Garamond, Helvetica, sans-serif;}
+    .display-9 {color: rgb(53, 7, 7); font-family: Garamond, Helvetica, sans-serif;}
+    p    {color: rgb(25, 189, 189); font-family: Garamond, Helvetica, sans-serif;}
+    </style>
   <title>Mood Music</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-  <body>
+  <body class="text-bg-dark">
 
     <header>
       <div class="container-fluid">
-      <h1> <!--TO DO center with css |  Make "Current Mood: ____" status, needs to only show after mood is picked-->
-        MOOD MUSIC</h1>
+      <h1 class="text-center"><strong> <!-- Make "Current Mood: ____" status, needs to only show after mood is picked-->
+        MOOD MUSIC</strong></h1>
       </div>
     </header>
+
+      <!-- Modal Trigger Button-->
+<button type="button" class="pt-1 mt-2 ms-2 text-bg-info" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <h3 class="display-9"><strong>How're we feeling today?</strong></h3>
+</button>
 
 <!-- Modal -->
 <div class="modal fade" id="moodModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -34,16 +45,16 @@
     </div>
   </div>
 </div>
-            <!--TO DO Make mood choices work?-->
+
     </div>
-    <div class="row">
+    <div class="mt-3 ms-2 row">
       <div class="col-sm-5">
       <!--TO DO Make display box for song info, showing info after mood is first clicked-->
-      <p>Song Information</p>
+      <p class="lead">Song Information</p>
       </div>
       <div class="col-sm-5" id="songsDiv">
       <!--TO DO Make display box for 5 random mood-based songs, showing info after mood is first clicked-->
-      <p></p>
+      <p class="lead">Songs</p>
       </div>
     
       <div class="col-sm-2 d-flex flex-column gap-2 mx-auto">
