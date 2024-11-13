@@ -16,13 +16,8 @@
       </div>
     </header>
 
-      <!-- Modal Trigger Button-->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Pick a Mood!
-</button>
-
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="moodModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -31,12 +26,10 @@
       </div>
       <div class="modal-body">
         Pick a mood!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Happy</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Angry</button>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sad</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Love</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="happyButton">Happy</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="angryButton">Angry</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="sadButton">Sad</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="loveButton">Love</button>
       </div>
     </div>
   </div>
@@ -48,7 +41,7 @@
       <!--TO DO Make display box for song info, showing info after mood is first clicked-->
       <p>Song Information</p>
       </div>
-      <div class="col-sm-5">
+      <div class="col-sm-5" id="songsDiv">
       <!--TO DO Make display box for 5 random mood-based songs, showing info after mood is first clicked-->
       <p>Songs</p>
       </div>
@@ -56,12 +49,12 @@
       <div class="col-sm-2 d-flex flex-column gap-2 mx-auto">
       <!--TO DO make nav links work-->
         <button class="btn btn-secondary" type="button" id="rerollButton">Reroll Songs</button> 
-        <button class="btn btn-outline-secondary" type="button" id="newMoodButton">New Mood</button> 
+        <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#moodModal" type="button" id="newMoodButton">New Mood</button> 
 
       </div>
     </div>
-    <script src="assets\js\script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets\js\script.js"></script>
   </body>
 
 </html>

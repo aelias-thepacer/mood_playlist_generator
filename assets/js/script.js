@@ -12,17 +12,7 @@ let song;
 
 // Selects elements from HTML
 let songsDivEl = document.querySelector('#songsDiv');
-let moodModal = document.querySelector('#moodModal');
-
-// Sets Mood Buttons to visible
-function callMoodButtons() {
-    moodModal.setAttribute("style", "visibility:visible");
-}
-
-// Sets Mood Buttons to hidden
-function dismissMoodButtons() {
-    moodModal.setAttribute("style", "visibility:hidden");
-}
+var moodModal = new bootstrap.Modal(document.getElementById('moodModal')); 
 
 // Selects [songsCalled] number of songs from [songArray] and calls objectMaker on each.
 function songSelector(songArray, songsCalled) {
@@ -65,17 +55,16 @@ function moodSelector(mood) {
     } else if (mood == "calm") {
         currentMood = songArrayCalm;
     }
-    dismissMoodButtons();
+
+    songSelector(currentMood, numberOfSongs);
 }
 
 // Sets up object listeners for buttons.
 document.getElementById("rerollButton").addEventListener("click", () => songSelector(currentMood, numberOfSongs));
-document.getElementById("newMoodButton").addEventListener("click", callMoodButtons);
 document.getElementById("sadButton").addEventListener("click", () => moodSelector("sad"));
 document.getElementById("angryButton").addEventListener("click", () => moodSelector("angry"));
 document.getElementById("happyButton").addEventListener("click", () => moodSelector("happy"));
 document.getElementById("loveButton").addEventListener("click", () => moodSelector("love"));
 
 
-songSelector(songArraySad, 10);
-dismissMoodButtons();
+moodModal.show();
