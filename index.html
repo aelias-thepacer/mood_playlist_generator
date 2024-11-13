@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Mood Music</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-
   <body>
 
     <header>
+      <div class="container-fluid">
       <h1> <!--TO DO center with css |  Make "Current Mood: ____" status, needs to only show after mood is picked-->
         MOOD MUSIC</h1>
+      </div>
     </header>
-    <div id="moodModal">
+
+      <!-- Modal Trigger Button-->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Pick a Mood!
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">How're You Feeling?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Pick a mood!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Happy</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Angry</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sad</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Love</button>
+      </div>
+    </div>
+  </div>
+</div>
             <!--TO DO Make mood choices work?-->
-
-      <button id="sadButton">Sad</button>
-      <button id="angryButton">Angry</button>
-      <button id="happyButton">Happy</button>
-      <button id="loveButton">Love</button>
-
     </div>
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-5">
       <!--TO DO Make display box for song info, showing info after mood is first clicked-->
       <p>Song Information</p>
       </div>
-      <div class="col-sm-4" id="songsDiv">
+      <div class="col-sm-5">
       <!--TO DO Make display box for 5 random mood-based songs, showing info after mood is first clicked-->
       <p>Songs</p>
       </div>
     
-      <div class="col-sm-4 d-flex flex-column gap-2 mx-auto">
+      <div class="col-sm-2 d-flex flex-column gap-2 mx-auto">
       <!--TO DO make nav links work-->
         <button class="btn btn-secondary" type="button" id="rerollButton">Reroll Songs</button> 
         <button class="btn btn-outline-secondary" type="button" id="newMoodButton">New Mood</button> 
