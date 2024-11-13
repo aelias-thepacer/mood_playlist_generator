@@ -25,7 +25,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Pick a mood!
+        <p>Pick a mood!</p>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="happyButton">Happy</button>
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="angryButton">Angry</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="sadButton">Sad</button>
@@ -43,13 +43,14 @@
       </div>
       <div class="col-sm-5" id="songsDiv">
       <!--TO DO Make display box for 5 random mood-based songs, showing info after mood is first clicked-->
-      <p>Songs</p>
+      <p></p>
       </div>
     
       <div class="col-sm-2 d-flex flex-column gap-2 mx-auto">
       <!--TO DO make nav links work-->
         <button class="btn btn-secondary" type="button" id="rerollButton">Reroll Songs</button> 
         <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#moodModal" type="button" id="newMoodButton">New Mood</button> 
+        <button class="btn btn-secondary" type="button" id="addSongButton">Add Song</button>
 
       </div>
     </div>
