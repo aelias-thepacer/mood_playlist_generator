@@ -27,7 +27,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">How're You Feeling?</h1
+        <h1 class="modal-title fs-5" id="exampleModalLabel">How're You Feeling?</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -41,10 +41,35 @@
   </div>
 </div>
 
+<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="formModalLabel">How're You Feeling?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>Add a song to the current mood!</h2>
+        <form id="form">
+          <label for="formTitle">Title</label>
+          <input id="formTitle"></input>
+          <label for="formArtist">Artist</label>
+          <input id="formArtist"></input>
+          <label for="formGenre">Genre</label>
+          <textarea id="formGenre"></textarea>
+          <label for="formAlbum">Album</label>
+          <textarea id="formAlbum"></textarea>
+          <input type="submit" data-bs-dismiss="modal" id="submit"></input>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
 
     <div class="mt-5 ms-2 row">
-      <div class="col-sm-5 border border-primary-subtle">
+      <div class="col-sm-5 border border-primary-subtle" id="infoDiv">
       <h2 class="display-4"><u>Song Information</u></h2>
 
       </div>
