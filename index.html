@@ -6,6 +6,7 @@
     .modal-body {color: rgb(0, 0, 0); font-family: Garamond, Helvetica, sans-serif;}
     .display-9 {color: rgb(53, 7, 7); font-family: Garamond, Helvetica, sans-serif;}
     p    {color: rgb(25, 189, 189); font-family: Garamond, Helvetica, sans-serif;}
+
     </style>
   <title>Mood Music</title>
   <meta charset="utf-8">
@@ -17,13 +18,13 @@
 
     <header>
       <div class="container-fluid">
-      <h1 class="text-center"><strong> <!-- Make "Current Mood: ____" status, needs to only show after mood is picked-->
-        MOOD MUSIC</strong></h1>
+      <h1 class="text-center"><u><strong> <!-- Make "Current Mood: ____" status, needs to only show after mood is picked-->
+        MOOD MUSIC</u></strong></h1>
       </div>
     </header>
 
       <!-- Modal Trigger Button-->
-<button type="button" class="pt-1 mt-2 ms-2 text-bg-info" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="pt-1 mt-2 ms-2 text-bg-info btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   <h3 class="display-9"><strong>How're we feeling today?</strong></h3>
 </button>
 
@@ -57,7 +58,7 @@
       <p class="lead">Songs</p>
       </div>
     
-      <div class="col-sm-2 d-flex flex-column gap-2 mx-auto">
+      <div class="col-sm-2 d-flex flex-column gap-2 mx-auto pe-5">
       <!--TO DO make nav links work-->
         <button class="btn btn-secondary" type="button" id="rerollButton">Reroll Songs</button> 
         <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#moodModal" type="button" id="newMoodButton">New Mood</button> 
