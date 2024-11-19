@@ -21,13 +21,12 @@ This will provide a list of ten songs that will fit the desired mood.
 - **JavaScript**- The heart of Mood Music, allowing it to listen to user interaction and receive user input, making a functional and interactive webpage.
 
 ## Try it now
-Visit Placeholder.com to get started.
+Visit https://aelias-thepacer.github.io/mood_playlist_generator/ to get started!
 
 ## Creators
    Team 10:
    Zack Mecham,
     Eli Pace,
-  Stuart Mitchell,
-   Taigan Pollard
+  Stuart Mitchell
 ## Special Thanks
 -To the instructor and all of the TA's who've been helping us on our coding journey thus far.
