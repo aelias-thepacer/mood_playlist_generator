@@ -4,7 +4,16 @@
   <style>
     .container-fluid {color: rgb(25, 189, 189); font-family: Garamond, Helvetica, sans-serif;}
     .modal-body {color: rgb(0, 0, 0); font-family: Garamond, Helvetica, sans-serif;}
-    .display-4 {color: rgb(25, 189, 189); font-family: Garamond, Helvetica, sans-serif;}
+    .modal-body h2 {text-align: center;}
+    .display-4 {color: #19bdbd; font-family: Garamond, Helvetica, sans-serif;}
+    .modal-title{color: rgb(180, 180, 180);}
+    #happyButton {width:113px;}
+    #sadButton {width:113px;}
+    #angryButton {width:113px;}
+    #loveButton {width: 113px;}
+    #mainButtons button {background-color:rgb(209, 209, 209);color:black; }
+    #mainButtons button:hover{background-color:rgb(25, 189, 189);}
+    #form {display: flex; flex-direction: column;}
 
     </style>
   <title>Mood Music</title>
@@ -26,15 +35,17 @@
 <div class="modal fade" id="moodModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+      <!--
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">How're You Feeling?</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+    -->
       <div class="modal-body">
         <h2>Pick a mood!</h2>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="happyButton">Happy</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="happyButton">Happy</button>
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="angryButton">Angry</button>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="sadButton">Sad</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="sadButton">Sad</button>
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="loveButton">Love</button>
       </div>
     </div>
@@ -44,10 +55,12 @@
 <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+      <!--
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="formModalLabel">How're You Feeling?</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+    -->
       <div class="modal-body">
         <h2>Add a song to the current mood!</h2>
         <form id="form">
@@ -77,7 +90,7 @@
       <h2 class="display-4"><u>Songs</u></h2>
       </div>
     
-      <div class="col-sm-2 d-flex flex-column gap-2 mx-auto pe-5">
+      <div id="mainButtons" class="col-sm-2 d-flex flex-column gap-2 mx-auto pe-5">
 
         <button class="btn btn-secondary" type="button" id="rerollButton">Reroll Songs</button> 
         <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#moodModal" type="button" id="newMoodButton">New Mood</button> 
